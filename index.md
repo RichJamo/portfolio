@@ -8,6 +8,8 @@ Below are examples of my online projects - some of them built entirely from scra
 
 [Farm Dashboard](https://richjamo.github.io/FarmDashboard/) - a simple utility to compare returns across different liquidity mining and yield farming options (under construction)
 
+[Auto Rebalancer](https://richjamo.github.io/autoBalancer/) - a Dapp that can be used to rebalance a selection of coins using an AMM like Sushiswap (under construction)
+
 ### Contact
 
 Please contact me on jamieson.rich@gmail.com or +27 72 679 6818
