@@ -4,9 +4,9 @@ I’m an Electrical Engineer with a wide-ranging career as an investment banker,
 
 Below are examples of my online projects - some of them built entirely from scratch, some built as part of courses I've attended at Ivan on Tech Academy.
 
-[Farm Optimizer](https://richjamo.github.io/FarmOptimizer/)
+[Farm Optimizer](https://richjamo.github.io/FarmOptimizer/) - a simple utility to check the value of your holdings in a particular liquidity pool
 
-[Farm Dashboard](https://richjamo.github.io/FarmDashboard/)
+[Farm Dashboard](https://richjamo.github.io/FarmDashboard/) - a simple utility to compare returns across different liquidity mining and yield farming options (under construction)
 
 ### Contact
 
