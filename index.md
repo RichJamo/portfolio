@@ -5,6 +5,7 @@ I’m an Electrical Engineer with a wide-ranging career as an investment banker,
 Below are examples of my online projects - some of them built entirely from scratch, some built as part of courses I've attended at Ivan on Tech Academy.
 
 https://richjamo.github.io/FarmOptimizer/
+
 https://richjamo.github.io/FarmDashboard/
 
 ```markdown
