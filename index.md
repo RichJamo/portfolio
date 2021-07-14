@@ -1,12 +1,11 @@
-## Welcome to GitHub Pages
+## Richard Jamieson Online Portfolio
 
-You can use the [editor on GitHub](https://github.com/RichJamo/portfolio/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+I’m an Electrical Engineer with a wide-ranging career as an investment banker, leadership consultant, entrepreneur and developer, now looking to work alongside other good, smart people in the DeFi / Blockchain space, helping to build out the ecosystem and make a dent in the world![image](https://user-images.githubusercontent.com/23520609/125630294-d74f66e8-e09d-4ea0-bb0a-4b775a0d3323.png)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Below are examples of my online projects - some of them built entirely from scratch, some built as part of courses I've attended at Ivan on Tech Academy.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+https://richjamo.github.io/FarmOptimizer/
+https://richjamo.github.io/FarmDashboard/
 
 ```markdown
 Syntax highlighted code block
