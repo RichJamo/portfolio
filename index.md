@@ -1,6 +1,6 @@
 ## Richard Jamieson Online Portfolio
 
-I’m an Electrical Engineer with a wide-ranging career as an investment banker, leadership consultant, entrepreneur and developer, now looking to work alongside other good, smart people in the DeFi / Blockchain space, helping to build out the ecosystem and make a dent in the world![image](https://user-images.githubusercontent.com/23520609/125630294-d74f66e8-e09d-4ea0-bb0a-4b775a0d3323.png)
+I’m an Electrical Engineer with a wide-ranging career as an investment banker, leadership consultant, entrepreneur and developer, now looking to work alongside other good, smart people in the DeFi / Blockchain space, helping to build out the ecosystem and make a dent in the world!
 
 Below are examples of my online projects - some of them built entirely from scratch, some built as part of courses I've attended at Ivan on Tech Academy.
 
