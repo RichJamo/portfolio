@@ -1,14 +1,15 @@
 ## Richard Jamieson
 
-I’m an Electrical Engineer with a wide-ranging career as an investment banker, leadership consultant, entrepreneur and developer, now looking to work alongside other good, smart people in the DeFi / Blockchain space, helping to build out the ecosystem and make a dent in the world!
+I’m an Electrical Engineer with a wide-ranging career as an investment banker, leadership consultant, entrepreneur and developer, now looking to work alongside other good, smart people in the DeFi / Blockchain space, helping to build out the ecosystem.
 
-Below are examples of my online projects - some of them built entirely from scratch, some built as part of courses I've attended at Ivan on Tech Academy.
+Below are examples of my online projects - some of them built entirely from scratch, some built as part of courses I've attended at Ivan on Tech Academy. Most of my coding work is done in JavaScript and Solidity, with the HTML and CSS obviously required to build the front-end, although I definitely prefer to do as little of the front-end design as possible.
 
 [Farm Optimizer](https://richjamo.github.io/FarmOptimizer/) - a simple utility to check the value of your holdings in a particular liquidity pool
+(source code can be found [here](https://github.com/RichJamo/FarmOptimizer))
 
-[Farm Dashboard](https://richjamo.github.io/FarmDashboard/) - a simple utility to compare returns across different liquidity mining and yield farming options (under construction)
+[Farm Dashboard](https://richjamo.github.io/FarmDashboard/) - a simple utility to compare returns across different liquidity mining and yield farming options (under construction - source code can be found [here](https://github.com/RichJamo/FarmDashboard))
 
-[Auto Rebalancer](https://richjamo.github.io/autoBalancer/) - a Dapp that can be used to rebalance a selection of coins using an AMM like Sushiswap (under construction)
+[Auto Rebalancer](https://richjamo.github.io/autoBalancer/) - a Dapp that can be used to rebalance a selection of coins using an AMM like Sushiswap (under construction - source code can be found [here](https://github.com/RichJamo/AutoBalancer))
 
 ### Contact
 
