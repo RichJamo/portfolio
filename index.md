@@ -11,6 +11,8 @@ Below are examples of my online projects - some of them built entirely from scra
 
 [Auto Rebalancer](https://richjamo.github.io/autoBalancer/) - a Dapp that can be used to rebalance a selection of coins using an AMM like Sushiswap (under construction - source code can be found [here](https://github.com/RichJamo/AutoBalancer))
 
+[Crypto Kitties](https://richjamo.github.io/CryptoKitties/) - inspired by the very succesful cryptokitties website, this was a project to learn about Dapp development generally, and about NFT's in particular.
+
 ### Contact
 
 Please contact me on jamieson.rich@gmail.com or +27 72 679 6818
