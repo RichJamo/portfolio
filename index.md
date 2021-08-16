@@ -4,6 +4,8 @@ I’m an Electrical Engineer with a wide-ranging career as an investment banker,
 
 Below are examples of my online projects - some of them built entirely from scratch, some built as part of courses I've attended at Ivan on Tech Academy. Most of my coding work is done in JavaScript and Solidity, with the HTML and CSS obviously required to build the front-end, although I definitely prefer to do as little of the front-end design as possible.
 
+[BentoBox SMEB Index](https://richjamo.github.io/BentoBoxBalancer/) - a non-custodial, automatically rebalanced, equal weighted index of SUSHI, MATIC, ETH and BTC, on the Polygon Mainnet, and using SushiSwap's BentoBox as a base. Invest USDC in order to participate in the index. Withdraw your funds at any time. (source code can be found [here](https://github.com/RichJamo/BentoBoxBalancer))
+
 [Farm Optimizer](https://richjamo.github.io/FarmOptimizer/) - a simple utility to check the value of your holdings in a particular liquidity pool
 (source code can be found [here](https://github.com/RichJamo/FarmOptimizer))
 
