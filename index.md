@@ -16,3 +16,4 @@ Below are examples of my online projects - some of them built entirely from scra
 ### Contact
 
 Please contact me on jamieson.rich@gmail.com or +27 72 679 6818
+[my cv](./Richard Jamieson CV 200721.pdf)
