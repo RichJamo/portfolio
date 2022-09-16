@@ -1,6 +1,8 @@
+---
 layout: page
 title: "Contact"
 permalink: /contact/
+---
 ### Contact
 
 email: [jamieson.rich@gmail.com](mailto:jamieson.rich@gmail.com)
