@@ -4,4 +4,4 @@ title: "OptyFi Vaults"
 permalink: /opty/
 ---
 
-https://app.opty.fi/
+[link to site](https://app.opty.fi/)
