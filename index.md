@@ -1,7 +1,11 @@
+layout: page
+title: "Richard Jamieson"
+<!-- permalink: /URL-PATH/ -->
+
 ## Richard Jamieson
-## [About Me](https://richjamo.github.io/BentoBoxBalancer/)
-## [Projects](https://richjamo.github.io/BentoBoxBalancer/)
-## [Contact](https://richjamo.github.io/BentoBoxBalancer/)
+## [About Me](https://richjamo.github.io/portfolio/about/)
+## [Projects](https://richjamo.github.io/portfolio/projects/)
+## [Contact](https://richjamo.github.io/portfolio/contact/)
 
 
 
