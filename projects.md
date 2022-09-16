@@ -4,11 +4,11 @@ title: "Projects"
 permalink: /projects/
 ---
 
-[](./images/crystl_vaults_page.png)
+![alt text](./images/crystl_vaults_page.png)
 [OptyFi Yield Aggregator](https://app.opty.fi/) - OptyFi is etc
 Repo is private - what else can I show?
 
-[](./images/opty_vaults_page.png)
+![alt text](./images/opty_vaults_page.png)
 [Crystl Finance V3 Vaults](https://polygon.crystl.finance/vaultsV3) - Crystl Finance is a multi-chain vaulting platform. I was the lead on a team of 3 solidity developers, working in collaboration with the front-end team, the CEO and product manager, to build, test and deploy an improved version of our vaults, with some innovative features.
 We also took the product through a HashEx audit, the results of which can be viewed [here](./documents/Crystl-Vaults_audit-report_1651814621605.pdf)
 The repo for these vaults is unfortunately private, but on request I would be happy to share the code with interested parties.
