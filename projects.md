@@ -3,7 +3,7 @@ layout: post
 title: "Projects"
 permalink: /projects/
 ---
-[OptyFi Yield Aggregator](https://app.opty.fi/) - OptyFi is etc
+[OptyFi Yield Aggregator](https://app.opty.fi/)
 ![OptyFi vaults page](./images/opty_vaults_page.png)
 
 [Crystl Finance V3 Vaults](https://richjamo.github.io/portfolio/about/)
