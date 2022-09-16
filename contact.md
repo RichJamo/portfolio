@@ -3,5 +3,8 @@ title: "Contact"
 permalink: /contact/
 ### Contact
 
-Please contact me on jamieson.rich@gmail.com or +27 72 679 6818
+email: [jamieson.rich@gmail.com](mailto:jamieson.rich@gmail.com)
+phone: +27 72 679 6818
+telegram: @richjamo
+discord: @richjamo#4735
 
