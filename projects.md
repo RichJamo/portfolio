@@ -3,10 +3,10 @@ layout: post
 title: "Projects"
 permalink: /projects/
 ---
-[OptyFi Yield Aggregator](https://app.opty.fi/)
+[OptyFi Yield Aggregator](https://richjamo.github.io/portfolio/opty/)
 ![OptyFi vaults page](./images/opty_vaults_page.png)
 
-[Crystl Finance V3 Vaults](https://richjamo.github.io/portfolio/about/)
+[Crystl Finance V3 Vaults](https://richjamo.github.io/portfolio/crystl/)
 ![Crystl vaults page](./images/crystl_vaults_page.png)
 
 [SMEB Non-custodial Automated Portfolio Management Dapp](https://spheron.infura-ipfs.io/ipfs/QmUjegH2uJPHjYceU4SRtm6qrdQbommrfcLnE6jJbAro72/)
