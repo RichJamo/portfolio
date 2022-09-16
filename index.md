@@ -1,6 +1,5 @@
 ---
-title: "Richard Jamieson"
-permalink: /portfolio/
+site.title: "Richard Jamieson"
 ---
 
 ## Richard Jamieson
