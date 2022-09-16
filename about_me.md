@@ -1,6 +1,6 @@
 layout: page
 title: "About Me"
-permalink: /about/
+permalink: /portfolio/about/
 
 I’m an Electrical Engineer with a wide-ranging career as an investment banker, leadership consultant, entrepreneur and developer, now looking to work alongside other good, smart people in the DeFi / Blockchain space, helping to build out the ecosystem.
 

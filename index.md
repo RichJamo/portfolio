@@ -1,7 +1,3 @@
-layout: page
-title: "Richard Jamieson"
-<!-- permalink: /URL-PATH/ -->
-
 ## Richard Jamieson
 ## [About Me](https://richjamo.github.io/portfolio/about/)
 ## [Projects](https://richjamo.github.io/portfolio/projects/)
