@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: "Projects"
 permalink: /projects/
 remote_theme: pages-themes/hacker@v0.2.0
@@ -7,7 +7,7 @@ plugins:
 - jekyll-remote-theme
 ---
 
-[BentoBox SMEB Index](https://richjamo.github.io/BentoBoxBalancer/) - a non-custodial, automatically rebalanced, equal weighted index of SUSHI, MATIC, ETH and BTC, on the Polygon Mainnet, and using SushiSwap's BentoBox as a base. Invest USDC in order to participate in the index. Withdraw your funds at any time. (source code can be found [here](https://github.com/RichJamo/BentoBoxBalancer))
+[BentoBox SMEB Index](https://spheron.infura-ipfs.io/ipfs/QmUjegH2uJPHjYceU4SRtm6qrdQbommrfcLnE6jJbAro72/) - a non-custodial, automatically rebalanced, equal weighted index of SUSHI, MATIC, ETH and BTC, on the Polygon Mainnet, and using SushiSwap's BentoBox as a base. Invest USDC in order to participate in the index. Withdraw your funds at any time. (source code can be found [here](https://github.com/RichJamo/BentoBoxBalancer))
 
 [Farm Optimizer](https://richjamo.github.io/FarmOptimizer/) - a simple utility to check the value of your holdings in a particular liquidity pool
 (source code can be found [here](https://github.com/RichJamo/FarmOptimizer))
