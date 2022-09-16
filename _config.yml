@@ -1,6 +1,7 @@
 remote_theme: digvijayad/freelancer-theme #pages-themes/hacker@v0.2.0
 plugins:
 - jekyll-remote-theme
+- jekyll-feed
 # title: richard jamieson
 # description: software developer portfolio
 
@@ -57,8 +58,7 @@ credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a
 # Build settings
 markdown: kramdown
 theme: minima
-plugins:
-  - jekyll-feed
+
 sass:
     sass_dir: _sass
     style: compressed
