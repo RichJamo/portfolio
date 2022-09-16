@@ -1,8 +1,8 @@
----
+<!-- ---
 layout: page
 title: "Richard Jamieson"
 permalink: /portfolio/
----
+--- -->
 
 ## Richard Jamieson
 ## [About Me](https://richjamo.github.io/portfolio/about/)
