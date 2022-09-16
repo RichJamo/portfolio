@@ -3,3 +3,74 @@ plugins:
 - jekyll-remote-theme
 title: richard jamieson
 description: software developer portfolio
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Your Awesome Title
+email: your-email@domain.com
+description: >-                       # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this line in _config.yml. 
+  It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+baseurl: ""                           # the subpath of your site, e.g. /blog
+url: ""                               # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+skills: Web Developer - Graphic Artist - User Experience Designer
+
+# Header Settings
+set_blog: true                        # Display blog? 
+header_bg: background.jpg          # Header background Image
+header_bg_title: <a href='http://www.freepik.com'>Background image Designed by Freepik</a>
+
+# Footer settings
+footer:                               #Footer Headers
+  copyright: Your Website
+  location: Location
+  social: Around the Web
+  credits: ABOUT FREELANCER
+  
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+# For more icons look at http://fontawesome.io/icons/#brand
+social:
+  - title: twitter
+    url: http://twitter.com/jekyllrb
+  - title: linkedin
+    url: https://linkedin.com
+  - title: stack-overflow
+    url: http://stackoverflow.com/questions/tagged/jekyll
+  - title: bitbucket
+    url: http://bitbucket.org/jekyll
+  - title: github
+    url: http://github.com/jekyll
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: 3481 Melrose Place
+  - line: Beverly Hills, CA 90210
+
+# Credits content
+credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+sass:
+    sass_dir: _sass
+    style: compressed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

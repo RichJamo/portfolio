@@ -1,0 +1,16 @@
+- class: ""
+  icon: "1.jpg"
+  icon-alt: "image-alt"
+  title: "Fall 2017"
+  sub_title: "SubTitle"
+  description: | 
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente,
+        totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+- class: "timeline-inverted"
+  icon: "2.jpg"
+  icon-alt: "image-alt"
+  title: "Spring 2016"
+  sub_title: "SubTitle"
+  description: | 
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente,
+        totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
