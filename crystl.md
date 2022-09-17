@@ -8,7 +8,7 @@ You can learn more about the protocol and the features we built by checking out 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oKEYdlj0jpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 For this work, we won a 2nd runner-up prize in the TRON Grand Hackathon 2022, and a runner-up prize in the Polygon BuidlIt Hackathon 2022.
-[crystl winner badge](./images/crystl_winner_badge.png)
+![crystl winner badge](./images/crystl_winner_badge.png)
 ### Challenges
 The major initial challenge was to figure out how to do multiple levels of vaulting, whilst still accurately tracking user shares of each compounded vault. This might seem trivial at first, but when you start to factor in that users could deposit and withdraw at different times, and in unpredictable ways, it becomes quite complex quite quickly. The way we solved this was with a lot of elbow grease, collaboration between myself and one other very smart solidity dev on the team, and going back to first principles in mathematics to figure out how it could be done.
 
