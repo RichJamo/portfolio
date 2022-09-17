@@ -5,7 +5,7 @@ permalink: /opty/
 ---
 [Opty.Fi](https://app.opty.fi/) is a DeFi yield aggregation protocol on Ethereum and Polygon. 
 
-### Building a Beefy Adapter
+## Building a Beefy Adapter
 I originally responded to a [bounty](https://gitcoin.co/issue/opendefi/hackathon/8/100026377) from the team back in 2021, where I built and tested a smart contract adapter for the Beefy protocol on Polygon. The challenge here was initially to figure out the codebase that Opty had already built, and how the adapter was designed to work. Then I had to adapt it to the specific way that the Beefy protocol had been built, so that the Opty vaults would be able to deposit to Beefy, withdraw, and perform other vital functions.
 
 ### Challenges
@@ -14,7 +14,7 @@ One of the most challenging things was to test the adapter across all 170+ pools
 The adapter in it's final form can be seen [here](https://github.com/Opty-Fi/defi-adapters/blob/main/contracts/2_matic/beefy.finance/BeefyFinanceAdapter.sol).
 The repo where I did most of the development work, and where you can see the unit tests and other details, is [here](https://github.com/RichJamo/beefy-adapter-kit).
 
-### Building logic for switching and compounding
+## Building logic for switching and compounding
 From December 2021 onwards I started working with the core team at OptyFi, where I joined the Optimisation Engine team. Our challenge here was to build, mostly in Python, an engine that could pull in data from protocols and liquidity pools right across ethereum, assess them on a risk/return basis, and then generate signals indicating when each of our active vaults should switch strategies, or when we should compound the rewards those vaults were generating.
 
 My subtasks within the team were to code up the following:
