@@ -9,7 +9,7 @@ permalink: /projects/
 [Crystl Finance V3 Vaults](https://richjamo.github.io/portfolio/crystl/)
 ![Crystl vaults page](./images/crystl_vaults_page.png)
 
-[SMEB Non-custodial Automated Portfolio Management Dapp](https://spheron.infura-ipfs.io/ipfs/QmUjegH2uJPHjYceU4SRtm6qrdQbommrfcLnE6jJbAro72/)
+[SMEB Non-custodial Automated Portfolio Management Dapp](https://richjamo.github.io/portfolio/smeb/)
 ![SMEB Autobalancer page](./images/smeb_page.png)
 
 ### Small tools built for my own DeFi activities:
