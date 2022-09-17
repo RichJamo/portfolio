@@ -4,7 +4,7 @@ title: "Projects"
 permalink: /projects/
 ---
 [OptyFi Yield Aggregator](https://richjamo.github.io/portfolio/opty/)
-<img src="./images/opty_vaults_page.png" alt="OptyFi vaults page" width="200"/>
+<img src="../images/opty_vaults_page.png" alt="OptyFi vaults page" width="200"/>
 <!-- ![OptyFi vaults page](./images/opty_vaults_page.png) -->
 
 [Crystl Finance V3 Vaults](https://richjamo.github.io/portfolio/crystl/)
