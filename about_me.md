@@ -3,7 +3,7 @@ layout: post
 title: "About Me"
 permalink: /about/
 ---
-<img src="../images/rich_profile_pic.jpeg" alt="Rich profile pic" width="400"/>  
+<img src="../images/rich_profile_pic.jpeg" alt="Rich profile pic" width="200"/>  
 
 I am a passionate and committed Smart Contract Developer with over 3 years experience in software development for traditional finance and DeFi, and prior experience in finance, entrepreneurship, and leadership consulting / coaching. I have an excellent reputation for collaborating in team environments to ship code that meets business requirements, is secure and gas efficient.
 
