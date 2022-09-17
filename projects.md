@@ -18,5 +18,5 @@ permalink: /projects/
 
 [Farm Dashboard](https://richjamo.github.io/FarmDashboard/) - a simple utility to compare returns across different liquidity mining and yield farming options (under construction - source code can be found [here](https://github.com/RichJamo/FarmDashboard))
 
-Built as part of a tutorial during my Solidity studies:  
+### Built as part of a tutorial during my Solidity studies:  
 [Crypto Kitties](https://richjamo.github.io/CryptoKitties/) - inspired by the very succesful cryptokitties website, this was a project to learn about Dapp development generally, and about NFT's in particular.
