@@ -15,8 +15,8 @@ I have been active in the DeFi scene for the last 1.5 years, mostly on the polyg
 
 Outside of work I am a father to a little girl, and when she's not keeping me busy then you'll find me either surfing, trail running, mountain biking, or just watching a good series.
 
-_Don't feel guilty if you don't know what you want to do with your life_  
+<!-- _Don't feel guilty if you don't know what you want to do with your life_  
 _The most interesting people I know_  
 _Didn't know at 22 what they wanted to do with their lives_  
 _Some of the most interesting 40-year-olds I know still don't_  
-        The Sunscreen Song - Baz Luhrmann
+        The Sunscreen Song - Baz Luhrmann -->
