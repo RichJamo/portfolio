@@ -5,6 +5,12 @@ permalink: /about/
 ---
 <img src="../images/rich_profile_pic.jpeg" alt="Rich profile pic" width="200"/>  
 
+_Don't feel guilty if you don't know what you want to do with your life_  
+_The most interesting people I know_  
+_Didn't know at 22 what they wanted to do with their lives_  
+_Some of the most interesting 40-year-olds I know still don't_  
+        The Sunscreen Song - Baz Luhrmann
+        
 So there I was, aged 42, married with one young kid, having established myself as a succesful leadership coach and consultant, but feeling unfulfilled in my career. As a young kid I'd been glued to computer screens, my brother and I playing every game we could get our hands on. At school, maths had always been the subject I'd excelled at, to the point where I started my university track in Actuarial Science, before pivoting to a degree in Philosophy and Pure Maths, and then a second degree in Electrical Engineering. Mathematics, problem-solving, and programming were things that I loved and was really good at, but somehow my career path had taken me away from these things almost completely.
 
 How had that happened? Well, after the engineering degree I went to work for Citigroup in London, as an analyst in a corporate finance team. Finance and markets have held a fascination for me for the longest time, so this was a great experience. However, I felt the pull to return home, and once I did I lucked into an amazing opportunity to set up a leadership academy for the largest opposition political party in South Africa. And so began my journey into leadership development and coaching.
@@ -33,8 +39,5 @@ When I'm not coding or coaching, I'm kept pretty busy looking after my little gi
 
 If you've made it to this point, thanks for taking the time to read about my circuitous career journey thus far. And if you happen to be in the market for a passionate, committed, and capable Solidity developer for your team, I'd love to jump on a call with you and see if I might be the right fit.
 
-<!-- _Don't feel guilty if you don't know what you want to do with your life_  
-_The most interesting people I know_  
-_Didn't know at 22 what they wanted to do with their lives_  
-_Some of the most interesting 40-year-olds I know still don't_  
-        The Sunscreen Song - Baz Luhrmann -->
+Oh, and here's a copy of my resume, which tells the same story, but in a different form:  
+[Richard Jamieson Resume](./documents/Richard_Jamieson_Resume_long.pdf)
