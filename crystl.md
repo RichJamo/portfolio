@@ -10,8 +10,11 @@ permalink: /crystl/
 
 ## Deploying new Vaults
 At the height of DeFi summer, there were new yield farms being spun up on an almost daily basis. One of our tasks on the smart contract team was to get new vaults spun up for these new yield farms as quickly and efficiently as possibly - efficiency here meaning gas efficiency as well as human resource time efficiency.  
+  
 We did this by semi-automating parts of the process - creating config files within our repo, and deployment scripts that pulled the configs directly from those files. We used Truffle to deploy and verify our contracts.  
+  
 Along the way we sometimes had to tweak our Strategy contracts to accomodate the quirks of different yield farm designs. Most yield farms were forks of two or three basic designs (the MasterChef and StakingRewards designs being the most popular), so we never had to completely overhaul our contracts. However, there were things like dual reward farms, or Quickswap introducing the dQuick token, which required us to quickly tweak our contracts whilst changing as little as possible and being sure not to introduce any security vulnerabilities or other bugs.  
+  
 One of the things that I was responsible for creating was a set of unit tests to test our contracts after all changes. This was built originally in Javascript, using hardhat and chai. The tests would deploy contracts on to a hardhat forked node (run off an Alchemy archive node), and test deposits, withdrawals and other functionality.  
 
 ## Building V3 Vaults
@@ -55,6 +58,9 @@ The repo for these vaults is unfortunately private, but on request I would be ha
 
 ## Deploying on Cronos
 As DeFi summer started to wane on Polygon, we were looking around for new opportunities. Cronos chain, which was about to be launched by Crypto.com, seemed a promising place to launch a vaulting platform, as the chain was brand new and we were able to get some support from the Cronos leadership team.  
+  
 We decided to initially launch our V2 vaults on Cronos, as V3 was still under development. However, the process was not without challenges. We probably underestimated how different it would be deploying contracts on a brand new chain. Initially there was only one block explorer, provided by the Cronos team themselves, and it was very buggy. This made it very difficult for us to verify our contracts, which in turn made it very difficult to do any manual testing on them.  
+  
 In addition, parts of the truffle suite didn't work properly on Cronos. We found that we couldn't actually deploy our contracts using Truffle. This meant that we had to come up with a workaround, and ended up deploying manually via Remix.  
+  
 It was also not possible to run our unit tests, because there wasn't yet an archive node available through any of the major node providers. Again, we had to come up with a workaround and final manual ways of testing. One of the things we did was test major functionality on Polygon, and then transfer our contracts to Cronos and only test the specific differences there.  
