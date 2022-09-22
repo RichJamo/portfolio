@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Crystl V3 Vaults"
+title: "Crystl Finance"
 permalink: /crystl/
 ---
 [Crystl Finance](https://polygon.crystl.finance/vaultsV3) is an award-winning, multi-chain vaulting platform. I was the lead on a team of 3 solidity developers, working in collaboration with the front-end team, the CEO and product manager. There were three major pieces of work we completed together:
@@ -8,7 +8,7 @@ permalink: /crystl/
 2 - Building, testing and deploying an improved version of the protocol's vaults
 3 - Deploying our contracts to Cronos, a brand new chain, for the first time
 
-## Deploying new Vaults
+## Efficiently deploying vaults
 At the height of DeFi summer, there were new yield farms being spun up on an almost daily basis. One of our tasks on the smart contract team was to get new vaults spun up for these new yield farms as quickly and efficiently as possibly - efficiency here meaning gas efficiency as well as human resource time efficiency.  
   
 We did this by semi-automating parts of the process - creating config files within our repo, and deployment scripts that pulled the configs directly from those files. We used Truffle to deploy and verify our contracts.  
