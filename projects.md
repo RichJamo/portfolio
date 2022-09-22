@@ -5,16 +5,12 @@ permalink: /projects/
 ---
 [OptyFi Yield Aggregator](https://richjamo.github.io/portfolio/opty/)  
 <img src="../images/opty_vaults_page.png" alt="Crystl vaults page" width="500"/>
-<!-- ![OptyFi vaults page](./images/opty_vaults_page.png) -->
 
 [Crystl Finance V3 Vaults](https://richjamo.github.io/portfolio/crystl/)  
 <img src="../images/crystl_vaults_page.png" alt="OptyFi vaults page" width="500"/>
 
-<!-- ![Crystl vaults page](./images/crystl_vaults_page.png) -->
-
 [SMEB Non-custodial Automated Portfolio Management Dapp](https://richjamo.github.io/portfolio/smeb/)  
 <img src="../images/smeb_page.png" alt="SMEB Autobalancer page" width="500"/>
-<!-- ![SMEB Autobalancer page](./images/smeb_page.png) -->
 
 ### Small tools built for my own DeFi activities:
 [Farm Optimizer](https://richjamo.github.io/FarmOptimizer/) - a simple utility to check the value of your holdings in a particular liquidity pool
