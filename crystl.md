@@ -16,15 +16,15 @@ One of the things that I was responsible for creating was a set of unit tests to
 
 ## Building V3 Vaults
 A strategic decision was made to overhaul our vaulting contracts to make possible a raft of innovations, specifically:
-1 - Maximizer vaults (or Ultra Farms, as we later called them)
-2 - Boosted vaults (vaults that pay additional rewards on top of the compounding yield)
-3 - Zap in/out functionality (a UX improvement so that users could deposit in a range of tokens)
+1 - Maximizer vaults (or Ultra Farms, as we later called them)  
+2 - Boosted vaults (vaults that pay additional rewards on top of the compounding yield)  
+3 - Zap in/out functionality (a UX improvement so that users could deposit in a range of tokens)  
 You can learn more about the protocol and the features we built by checking out the following devpost [submission](https://devpost.com/software/crystl-finance). This short youtube video in particular is great for demonstrating how our Ultra Farms differ from standard yield farm vaulting solutions:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oKEYdlj0jpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-And this image shows a standard vault design:
+And this image shows a standard vault design:  
 <img src="../images/crystl_vaults-V2 compounding.drawio.png" alt="V2 compounding" width="500"/>
-Whereas this image shows what an Ultra Farm does:
+Whereas this image shows what an Ultra Farm does:  
 <img src="../images/crystl_vaults-V3 Maximizer idea.drawio.png" alt="V3 compounding" width="500"/>
 
 For this work, we won a 2nd runner-up prize in the TRON Grand Hackathon 2022, and a runner-up prize in the Polygon BuidlIt Hackathon 2022.  
