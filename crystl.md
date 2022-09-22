@@ -15,15 +15,15 @@ Along the way we sometimes had to tweak our Strategy contracts to accomodate the
 One of the things that I was responsible for creating was a set of unit tests to test our contracts after all changes. This was built originally in Javascript, using hardhat and chai. The tests would deploy contracts on to a hardhat forked node (run off an Alchemy archive node), and test deposits, withdrawals and other functionality.
 
 ## Building V3 Vaults
-A strategic decision was made to overhaul our vaulting contracts to make possible a raft of innovations, specifically:
-1 - Maximizer vaults (or Ultra Farms, as we later called them)  
-2 - Boosted vaults (vaults that pay additional rewards on top of the compounding yield)  
-3 - Zap in/out functionality (a UX improvement so that users could deposit in a range of tokens)  
+A strategic decision was made to overhaul our vaulting contracts to make possible a raft of innovations, specifically:  
+1. Maximizer vaults (or Ultra Farms, as we later called them)  
+2. Boosted vaults (vaults that pay additional rewards on top of the compounding yield)  
+3. Zap in/out functionality (a UX improvement so that users could deposit in a range of tokens)  
 You can learn more about the protocol and the features we built by checking out the following devpost [submission](https://devpost.com/software/crystl-finance). This short youtube video in particular is great for demonstrating how our Ultra Farms differ from standard yield farm vaulting solutions:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oKEYdlj0jpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 And this image shows a standard vault design:  
-<img src="../images/crystl_vaults-V2 compounding.drawio.png" alt="V2 compounding" width="500"/>
+<img src="../images/crystl_vaults-V2 compounding.drawio.png" alt="V2 compounding" width="500"/>  
 Whereas this image shows what an Ultra Farm does:  
 <img src="../images/crystl_vaults-V3 Maximizer idea.drawio.png" alt="V3 compounding" width="500"/>
 
@@ -31,6 +31,12 @@ For this work, we won a 2nd runner-up prize in the TRON Grand Hackathon 2022, an
 ![crystl winner badge](./images/crystl_winner_badge.png)
 ### Challenges
 The overarching challenge at the start of this process was to decide how much to change our existing code and contract structure, and how much to try and keep it the same. Obviously in smart contract development, it is always comforting from a security point of view to be able to retain as much battle-tested code as possible. However, for the new features we were being asked to build, some big changes were going to be needed. We eventually did decide to go the route of overhauling the majority of our contracts, but still keeping core pieces of logic.
+
+This first image shows a high level overview of the basic contract structure of our V2 vaults:  
+<img src="../images/crystl_vaults-V2 high level.drawio.png" alt="V2 high level" width="500"/>   
+
+And this second image shows a high level overview of our V3 vaults, showing some of the key changes:  
+<img src="../images/crystl_vaults-V3 high level.drawio.png" alt="V3 high level" width="500"/>  
 
 The first specific challenge was to figure out how to do multiple levels of vaulting, whilst still accurately tracking user shares of each compounded vault. This might seem trivial at first, but when you start to factor in that users could deposit and withdraw at different times, and in unpredictable ways, it becomes quite complex quite quickly. The way we solved this was with a lot of elbow grease, collaboration between myself and one other very smart solidity dev on the team, and going back to first principles in mathematics to figure out how it could be done.
 
