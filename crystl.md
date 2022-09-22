@@ -63,4 +63,4 @@ We decided to initially launch our V2 vaults on Cronos, as V3 was still under de
   
 In addition, parts of the truffle suite didn't work properly on Cronos. We found that we couldn't actually deploy our contracts using Truffle. This meant that we had to come up with a workaround, and ended up deploying manually via Remix.  
   
-It was also not possible to run our unit tests, because there wasn't yet an archive node available through any of the major node providers. Again, we had to come up with a workaround and final manual ways of testing. One of the things we did was test major functionality on Polygon, and then transfer our contracts to Cronos and only test the specific differences there.  
+It was also not possible to run our unit tests, because there wasn't yet an archive node available through any of the major node providers. Again, we had to come up with a workaround and find manual ways of testing. One of the things we did was test major functionality on Polygon, and then transfer our contracts to Cronos and only test the specific differences there.  
