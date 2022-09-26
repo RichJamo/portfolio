@@ -46,7 +46,7 @@ The first specific challenge was to figure out how to do multiple levels of vaul
 
 A second challenge was to keep our main vault smart contract from becoming too big to deploy. Once we had everything working, we then had to do further work to reduce the size of our smart contract. We tackled this in a number of different ways - combing through the code to remove redundant variables or code, then extracting certain functions into externally deployed libraries, and finally using the optimiser to eventually bring the code down to the size that we needed it to be.
 
-Another major challenge was finding a way to bring down the cost of deployment per vault. We did this through a combination of using proxy contracts, and also encoding certain variables in novel ways.
+Another major challenge was finding a way to bring down the cost of deployment per vault. We did this by creating a factory contract, which would in turn deploy the individual instances of the strategy contract for each vault.
 
 Finally, we had to ensure that this new set of smart contracts was secure and ready for production. This was not just a fork of battle-tested smart contract code, there was a lot of novel code, and we first had to satisfy ourselves that it was secure, and then get it through an audit process. 
 
