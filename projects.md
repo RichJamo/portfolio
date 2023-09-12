@@ -4,7 +4,7 @@ title: "Projects"
 permalink: /projects/
 ---
 [Atem - Carbon Credit Aggregator](https://richjamo.github.io/portfolio/atem/)  
-<img src="../images/atem.png" alt="Crystl vaults page" width="500"/>
+<img src="../images/atem.png" alt="Atem search page" width="500"/>
 
 [OptyFi Yield Aggregator](https://richjamo.github.io/portfolio/opty/)  
 <img src="../images/opty_vaults_page.png" alt="Crystl vaults page" width="500"/>
