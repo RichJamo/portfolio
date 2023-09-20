@@ -13,5 +13,15 @@ One of the most challenging things was to get the C3 adapter to execute two swap
 
 Unfortunately the Atem monorepo is private and therefore can't be shared here.
 
-## NEXT SECTION COMING SOON
+## Subgraph Creation and Deployment - COMING SOON
+
+### Challenges
+
+## Threat Modelling - COMING SOON
+
+### Challenges
+
+## Migrating from Tangany to OZ Defender Relayer - COMING SOON
+
+### Challenges
 
