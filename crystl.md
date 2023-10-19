@@ -13,7 +13,7 @@ At the height of DeFi summer, there were new yield farms being spun up on an alm
   
 We did this by semi-automating parts of the process - creating config files within our repo, and deployment scripts that pulled the configs directly from those files. We used Truffle to deploy and verify our contracts.  
   
-Along the way we sometimes had to tweak our Strategy contracts to accomodate the quirks of different yield farm designs. Most yield farms were forks of two or three basic designs (the MasterChef and StakingRewards designs being the most popular), so we never had to completely overhaul our contracts. However, there were things like dual reward farms, or Quickswap introducing the dQuick token, which required us to quickly tweak our contracts whilst changing as little as possible and being sure not to introduce any security vulnerabilities or other bugs.  
+Along the way we sometimes had to tweak our Strategy contracts to accommodate the quirks of different yield farm designs. Most yield farms were forks of two or three basic designs (the MasterChef and StakingRewards designs being the most popular), so we never had to completely overhaul our contracts. However, there were things like dual reward farms, or Quickswap introducing the dQuick token, which required us to quickly tweak our contracts whilst changing as little as possible and being sure not to introduce any security vulnerabilities or other bugs.  
   
 One of the things that I was responsible for creating was a set of unit tests to test our contracts after all changes. This was built originally in Javascript, using hardhat and chai. The tests would deploy contracts on to a hardhat forked node (run off an Alchemy archive node), and test deposits, withdrawals and other functionality.  
 
