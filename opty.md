@@ -6,7 +6,7 @@ permalink: /opty/
 [Opty.Fi](https://app.opty.fi/) is a DeFi yield aggregation protocol on Ethereum and Polygon. 
 
 ## Building a Beefy Adapter
-I originally responded to a [bounty](https://gitcoin.co/issue/opendefi/hackathon/8/100026377) from the team back in 2021, where I built and tested a smart contract adapter for the Beefy protocol on Polygon. The challenge here was initially to figure out the codebase that Opty had already built, and how the adapter was designed to work. Then I had to adapt it to the specific way that the Beefy protocol had been built, so that the Opty vaults would be able to deposit to Beefy, withdraw, and perform other vital functions.
+I originally responded to a bounty from the team back in 2021, where I built and tested a smart contract adapter for the Beefy protocol on Polygon. The challenge here was initially to figure out the codebase that Opty had already built, and how the adapter was designed to work. Then I had to adapt it to the specific way that the Beefy protocol had been built, so that the Opty vaults would be able to deposit to Beefy, withdraw, and perform other vital functions.
 
 ### Challenges
 One of the most challenging things was to test the adapter across all 170+ pools that Beefy was vaulting at that time. This meant adapting the TypeScript unit test in such a way that it could run efficiently on so many pools, and also meant figuring out how to get the adapter to work across a range of edge cases.
