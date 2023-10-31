@@ -20,7 +20,7 @@ The second subgraph was one to track events coming out of our own adapter contra
 ### Challenges
 The initial challenge for me in starting to work with subgraphs was just to get my head around the different moving parts - the manifest, the mappings, and the template. After that there were definitely some challenges in figuring out how to debug the code without having to redeploy the subgraph every time, and there were some challenges in refactoring our existing Sushiswap subgraph, especially when all of the dependencies had to be updated, which broke some parts of the code which had been deprecated in the newer dependencies.
 
-## Threat Modelling - COMING SOON
+## Threat Modelling
 Our goal at Atem was to create a product that traditional companies would use, so we had to be extremely careful to ensure that our smart contracts were not vulnerable to attacks, and particularly that client funds (in the form of USDC or carbon credits) would not be at risk. In order to do this we created an overview of all of the systems that we use and how they are connected (databases in AWS, smart contracts, front end code, hosting service, multisigs, oracle contracts, Coinbase). We then created a series of detailed tables describing any and all possible threats that we could think of, also detailing the size of the threat. Finally we created a table of security measures to cover all of these potential threats - detailing both what we could do to prevent (or minimize) the threat, as well as how we could make sure we could monitor the threat and how we would respond if it did come to pass.
 
 ### Challenges
@@ -28,7 +28,7 @@ The major challenge with this threat modelling work is knowing that vulnerabilit
 
 Finally, we also shared our work (both our threat modelling and our smart contracts) with a security audit firm to get an outside perspective and check that we weren't missing any obvious vulnerabilities. 
 
-## Migrating from Tangany to OZ Defender Relayer - COMING SOON
+## Migrating from Tangany to OZ Defender Relayer
 When we initially built Atem, we built it with the idea that each of our customers' carbon credit tokens would be stored in their own separate wallet, and that these wallets would be custodial wallets, hosted by a service called Tangany. This had a number of implications for how we built both our smart contracts and our back end. The back end would mainly interact with Tangany, via the Tangany API, and then Tangany in turn would make calls to our adapter smart contracts. Tokens could then be transferred from the Tangany custodial wallets to our adapter contracts, and vice versa.
 
 Based on several strategic decisions made within the business, it became clear that it wasn't necessary for us to have individual custodial wallets for each of our customers. Tokens could be stored as securely, if not more securely, in a single wallet, with watertight logic at the level of the smart contract to track who's tokens were whose.
