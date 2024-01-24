@@ -3,7 +3,7 @@ layout: post
 title: "Crystl Finance"
 permalink: /crystl/
 ---
-[Crystl Finance](https://polygon.crystl.finance/vaultsV3) is an award-winning, multi-chain vaulting platform. I was the lead on a team of 3 solidity developers, working in collaboration with the front-end team, the CEO and product manager. There were three major pieces of work we completed together:
+Crystl Finance was an award-winning, multi-chain vaulting platform, that held over $30m of TVL at its peak. I was the lead on a team of 3 solidity developers, working in collaboration with the front-end team, the CEO and product manager. There were three major pieces of work we completed together:
 1 - Quickly and efficiently deploying new vaults, accomodating the quirks of new and different yield farms
 2 - Building, testing and deploying an improved version of the protocol's vaults
 3 - Deploying our contracts to Cronos, a brand new chain, for the first time
