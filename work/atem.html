@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atem — Richard Jamieson</title>
+<meta name="description" content="Tokenised-carbon platform. Adapter contracts, subgraphs, relayer infrastructure and a platform-wide threat model.">
+<meta name="colour-scheme" content="light dark">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>◆</text></svg>">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <a class="wordmark" href="../index.html">Richard Jamieson</a>
+  <nav><a href="../index.html#work">Work</a><a href="../index.html#security">Security</a><a href="../index.html#approach">Approach</a><a href="../index.html#about">About</a></nav>
+</header>
+<main id="main">
+<article class="prose project">
+<header class="project-head">
+  <p class="eyebrow"><a href="../index.html#work">Work</a></p>
+  <h1>Atem</h1>
+  <p class="role">Blockchain Engineer</p>
+  <p class="period">November 2022 – June 2024</p>
+  
+</header>
+<p>Atem was a carbon-credit aggregation platform, integrating tokenised credits on Polygon and Celo, aimed at traditional companies rather than crypto natives. That audience shaped everything: the people buying were not going to tolerate crypto-shaped risk.</p>
+<h2 id="adapters-for-the-tokenisation-protocols">Adapters for the tokenisation protocols</h2>
+<p>Carbon credits had been tokenised by several protocols, each with its own mechanics. I built adapter contracts to buy and retire credits from our application — first for Toucan, the largest, then for C3.</p>
+<p>Buying meant automating a swap from USDC into a pool token, then redeeming that pool token for the specific project credit through the protocol's own contracts. Both went to production on Polygon, built in Solidity with a Hardhat and TypeScript test suite running against a forked node, and deployment automated so that verification, logging and monitoring registration happened as one step.</p>
+<p>The awkward part was the second adapter, which needed two swaps across two different exchanges — and the second exchange used an architecture substantially unlike the Uniswap-style approach nearly everything else had followed. That was a matter of reading the documentation properly and finding working examples rather than assuming the familiar pattern would transfer.</p>
+<h2 id="subgraphs">Subgraphs</h2>
+<p>Two were needed. One tracked pool reserves so we could calculate live prices for the bundle tokens — adapted from an existing subgraph, brought up to date across several breaking dependency changes, and stripped of the fields we did not need. The other indexed events from our own adapters, giving the backend reliable confirmation of purchases and retirements so inventory and user history stayed correct.</p>
+<h2 id="threat-modelling">Threat modelling</h2>
+<p>Because our customers were conventional businesses holding real value in USDC and credits, we did a proper platform-wide threat model rather than a checklist.</p>
+<p>We inventoried every component and how they connected — databases, contracts, frontend, hosting, multisigs, oracles, the custody provider, the exchange account. Then we built out the threats systematically, sized each one, and wrote a matching control for every threat covering three things: how we prevent it, how we would <em>detect</em> it, and what we would do if it happened anyway. We shared the model and the contracts with an external security firm for an outside read.</p>
+<p>The lesson that stuck: vulnerabilities appear where you are not looking, so thoroughness beats cleverness. Thinking explicitly as an attacker, and writing it all down somewhere structured enough to keep adding to over weeks, was what made it useful.</p>
+<h2 id="migrating-custody">Migrating custody</h2>
+<p>We had originally given each customer an individual custodial wallet through a third-party provider, which shaped both the contracts and the backend. When the business concluded that per-customer wallets were unnecessary, I spent several months evaluating alternatives and then specified the migration to OpenZeppelin Defender's relayer, sitting between our backend and our contracts.</p>
+<p>The real problem was not technical, it was the trade-off. Everything in a multisig is safest and least usable — every retirement needs multiple signatures. Everything in a hot wallet is usable and a target, increasingly so as the value held grows. We settled on holding a working balance hot, moving anything above a threshold to the multisig, and alerting on the crossing in both directions.</p>
+<p>It moved across with no interruption to the service and no risk to customer holdings, on schedule.</p>
+
+<p class="back"><a href="../index.html#work">← All work</a></p>
+</article>
+</main>
+<footer class="site">
+  <p><a href="mailto:jamieson.rich@gmail.com">jamieson.rich@gmail.com</a> · <a href="https://github.com/RichJamo">GitHub</a></p>
+  <p class="muted">Plettenberg Bay, South Africa · UTC+2</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hydrex — Richard Jamieson</title>
+<meta name="description" content="Concentrated-liquidity DEX on Base. Sole engineer on the protocol&#x27;s liquidity-mining reward system, and a contributor to its contract layer.">
+<meta name="colour-scheme" content="light dark">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>◆</text></svg>">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <a class="wordmark" href="../index.html">Richard Jamieson</a>
+  <nav><a href="../index.html#work">Work</a><a href="../index.html#security">Security</a><a href="../index.html#approach">Approach</a><a href="../index.html#about">About</a></nav>
+</header>
+<main id="main">
+<article class="prose project">
+<header class="project-head">
+  <p class="eyebrow"><a href="../index.html#work">Work</a></p>
+  <h1>Hydrex</h1>
+  <p class="role">Senior Smart Contract Engineer / Protocol Engineer</p>
+  <p class="period">November 2025 – present</p>
+  <div class="metrics"><div class="metric"><span class="figure">25.1M</span><span class="label">tokens distributed</span></div><div class="metric"><span class="figure">1,669</span><span class="label">liquidity providers</span></div><div class="metric"><span class="figure">99.97%</span><span class="label">transaction success</span></div></div>
+</header>
+<p>Hydrex is a concentrated-liquidity DEX on Base. I joined in November 2025 as a protocol engineer, and I own its liquidity-mining reward system outright.</p>
+<h2 id="the-reward-system">The reward system</h2>
+<p>Liquidity mining sounds simple until you try to make it exact. A campaign says: pay this budget, to whoever provides liquidity in this pool, over this window, in proportion to how much and for how long. Doing that honestly means measuring every position continuously, and settling on-chain cheaply enough that the gas does not eat the reward.</p>
+<p>I designed and built the whole thing — a TypeScript and NestJS service that continuously snapshots every position in incentivised pools, converts those observations into time-weighted score-seconds, allocates against a fixed budget, publishes Merkle roots on-chain, and serves claim proofs through a public API. PostgreSQL with TimescaleDB underneath, Redis for caching.</p>
+<p><strong>To date it has distributed 25.1 million tokens to 1,669 liquidity providers, across 2,469 campaigns and 163 pools, through 777,470 on-chain root updates.</strong></p>
+<h2 id="the-constraint-that-shaped-the-design">The constraint that shaped the design</h2>
+<p>Merkle roots here are cumulative and irreversible. Once a root is published, an allocation can only ever go up — you cannot claw back a number you have already committed to. Every other design decision follows from that.</p>
+<p>So rather than recomputing totals and asserting afterwards that they never decreased, I built the allocator around incremental deltas, which makes the monotonic floor hold <em>by construction</em>. The pipeline snapshots first and aggregates second, which keeps every reward calculation replayable from raw observations — if a number is ever disputed, it can be rebuilt from what was actually observed on-chain rather than from a cached total.</p>
+<p>Settlement is batched: one transaction per cycle carrying every campaign's root. Gas stays roughly flat as campaigns multiply — about 18k gas per root, <strong>0.096 ETH in total</strong> across the system's life. It has absorbed an elevenfold increase in concurrent campaigns without a change in throughput, and sustained <strong>99.97% transaction success across 154 consecutive days</strong> of unattended operation.</p>
+<h2 id="invariants-and-the-bugs-they-did-not-catch">Invariants, and the bugs they did not catch</h2>
+<p>I specified seven financial invariants — budget conservation, the monotonic floor, duplicate-free trees, leaf encoding matched byte-for-byte to the on-chain verifier — enforced by 488 tests and by standalone audit scripts that run against production data as a deployment gate.</p>
+<p>Two defects still got through, and both are the interesting kind: neither raised an error.</p>
+<p>The first divided an <em>incremental</em> reward delta by a <em>cumulative</em> score-seconds denominator. Newly joined providers were underpaid by up to a third; providers who had left kept accruing. Every batch balanced. The budget held. Somebody's yield was simply quietly wrong.</p>
+<p>The second was a cache key. The snapshot downsampler keyed its cache on the position, while the row it guarded was per-campaign. Wherever two campaigns ran on the same pool, the second silently wrote zero snapshots — and because processing order reshuffled each cycle, each campaign lost roughly half its data, nondeterministically. I found it by auditing the pipeline ahead of a change in campaign-creation permissions, and confirmed it was already affecting live pools.</p>
+<p>I think about those two more than anything else I have shipped. Failure modes that do not look like failures are the ones worth building your process around.</p>
+<h2 id="contracts-and-security">Contracts and security</h2>
+<p>Alongside the distributor I work on the protocol's Solidity — roughly 6,370 lines of production contract code to date.</p>
+<p>I delivered the protocol's decentralisation workstream, moving privileged minting behind a 24-hour timelock. <strong>Fifteen contracts, audited, zero high-severity findings, no failed remediations.</strong> I have been the sole counterpart to our external auditors across four engagements: scoping, findings response, remediation.</p>
+<p>I also hardened the distributor's own operational surface — splitting a monolithic service so the public API process cannot hold the signing key, and restricting the operator key to a single on-chain role verified to hold no administrative privileges.</p>
+
+<p class="back"><a href="../index.html#work">← All work</a></p>
+</article>
+</main>
+<footer class="site">
+  <p><a href="mailto:jamieson.rich@gmail.com">jamieson.rich@gmail.com</a> · <a href="https://github.com/RichJamo">GitHub</a></p>
+  <p class="muted">Plettenberg Bay, South Africa · UTC+2</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opty.fi — Richard Jamieson</title>
+<meta name="description" content="Yield-optimisation protocol. Built a Beefy adapter, then joined the optimisation-engine team building cost/benefit models in Python.">
+<meta name="colour-scheme" content="light dark">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>◆</text></svg>">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <a class="wordmark" href="../index.html">Richard Jamieson</a>
+  <nav><a href="../index.html#work">Work</a><a href="../index.html#security">Security</a><a href="../index.html#approach">Approach</a><a href="../index.html#about">About</a></nav>
+</header>
+<main id="main">
+<article class="prose project">
+<header class="project-head">
+  <p class="eyebrow"><a href="../index.html#work">Work</a></p>
+  <h1>Opty.fi</h1>
+  <p class="role">Solidity Developer</p>
+  <p class="period">December 2021 – October 2022</p>
+  
+</header>
+<p>Opty.fi was a DeFi yield-aggregation protocol on Ethereum and Polygon. I came in through the front door in 2021 — they posted a bounty for a smart-contract adapter, I built it, and that turned into a place on the core team.</p>
+<h2 id="the-beefy-adapter">The Beefy adapter</h2>
+<p>The bounty was an adapter letting Opty's vaults deposit into, withdraw from and account for positions in Beefy Finance on Polygon. The work was in two halves: understanding a codebase and an adapter interface I had not written, then fitting it to the specific way Beefy behaved.</p>
+<p>The interesting constraint was coverage. Beefy was vaulting more than 170 pools at the time, and an adapter that works against three of them proves nothing. I restructured the TypeScript tests so they could run efficiently across the full set, which is what surfaced the edge cases worth handling.</p>
+<p>The <a href="https://github.com/Opty-Fi/defi-adapters/blob/main/contracts/2_matic/beefy.finance/BeefyFinanceAdapter.sol">finished adapter</a> is public, as is the <a href="https://github.com/RichJamo/beefy-adapter-kit">development repository</a> with the tests.</p>
+<h2 id="the-optimisation-engine">The optimisation engine</h2>
+<p>From December 2021 I joined the optimisation-engine team, which was mostly Python. The goal was to pull data from protocols and pools across Ethereum, assess them on risk-adjusted return, and emit signals telling each vault when to switch strategy or compound its rewards.</p>
+<p>My part was the economics of those decisions: estimating the fixed and proportional cost of a strategy switch, combining that with expected APR into a yes/no signal, doing the same for compounding, and building the dashboard controls to execute either.</p>
+<p><strong>Two problems worth describing, because I solved both by abandoning my first approach.</strong></p>
+<p>The first was cost estimation in the Curve and Convex ecosystem, which is idiosyncratic — some contracts in Vyper, several generations of contract standard, and no single interface to rely on. I started by trying to understand and replicate Curve's own proportional-cost mathematics in Python. That went badly: every edge case added complexity and the code became unwieldy. I abandoned it and switched to simulation instead — run the candidate transaction against a forked node, read the gas cost from the receipt and the proportional cost from the vault balance before and after. Measuring turned out to be far more robust than modelling.</p>
+<p>The second was a language boundary. The engine was Python and needed to stay Python, but everything that talked to contracts was JavaScript, where the tooling was more mature — particularly for batched calls and multisig transactions. I first tried to rebuild that layer in Python, and hit both missing capability and, worse, duplicated logic that would inevitably drift from its JavaScript counterpart. The eventual solution was to stop duplicating: invoke the existing, tested JavaScript from Python as a subprocess, return the encoded transaction, and simulate from there. One implementation, reused rather than reimplemented.</p>
+<p>Most of this work lives in private repositories.</p>
+
+<p class="back"><a href="../index.html#work">← All work</a></p>
+</article>
+</main>
+<footer class="site">
+  <p><a href="mailto:jamieson.rich@gmail.com">jamieson.rich@gmail.com</a> · <a href="https://github.com/RichJamo">GitHub</a></p>
+  <p class="muted">Plettenberg Bay, South Africa · UTC+2</p>
+</footer>
+</body>
+</html>

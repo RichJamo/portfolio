@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Richard Jamieson</title>
+<meta name="description" content="Protocol architect and engineering lead. Solidity, cross-chain vault systems, incentive infrastructure and smart-contract security.">
+<meta name="colour-scheme" content="light dark">
+<link rel="stylesheet" href="./style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>◆</text></svg>">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <a class="wordmark" href="./index.html">Richard Jamieson</a>
+  <nav><a href="./index.html#work">Work</a><a href="./index.html#security">Security</a><a href="./index.html#approach">Approach</a><a href="./index.html#about">About</a></nav>
+</header>
+<main id="main">
+<section class="hero">
+<h1>Protocol architect and engineering lead</h1>
+<p>I design, build and secure DeFi infrastructure — Solidity contracts, cross-chain vault systems, and the off-chain services that settle them on-chain.</p>
+<p>Currently Senior Smart Contract Engineer at <strong>Hydrex</strong>, a concentrated-liquidity DEX on Base, where I am the sole engineer on the protocol's liquidity-mining reward system. Before that I founded <strong>Amana DeFi</strong>, an omnichain yield aggregator on ZetaChain, and wrote its protocol layer.</p>
+<p>Twenty years of work before this — corporate finance, two companies of my own, and a decade developing leaders — which is why I tend to think about systems and the people running them at the same time.</p>
+</section>
+
+<section id="work">
+<h2>Selected work</h2>
+<div class="cards">
+<article class="card">
+  <header>
+    <h3><a href="./work/hydrex.html">Hydrex</a></h3>
+    <p class="role">Senior Smart Contract Engineer / Protocol Engineer</p>
+    <p class="period">November 2025 – present</p>
+  </header>
+  <p>Concentrated-liquidity DEX on Base. Sole engineer on the protocol's liquidity-mining reward system, and a contributor to its contract layer.</p>
+  <div class="metrics"><div class="metric"><span class="figure">25.1M</span><span class="label">tokens distributed</span></div><div class="metric"><span class="figure">1,669</span><span class="label">liquidity providers</span></div><div class="metric"><span class="figure">99.97%</span><span class="label">transaction success</span></div></div>
+  <ul class="tags"><li>Solidity</li><li>TypeScript</li><li>NestJS</li><li>PostgreSQL</li><li>Merkle</li><li>Base</li></ul>
+  <p class="more"><a href="./work/hydrex.html">Read more →</a></p>
+</article>
+<article class="card">
+  <header>
+    <h3><a href="./work/amana.html">Amana DeFi</a></h3>
+    <p class="role">Founder and Technical Lead</p>
+    <p class="period">August 2024 – August 2025</p>
+  </header>
+  <p>Omnichain yield aggregator on ZetaChain. Founded it, designed the architecture and wrote the protocol layer.</p>
+  <div class="metrics"><div class="metric"><span class="figure">94%</span><span class="label">of the Solidity written</span></div><div class="metric"><span class="figure">6</span><span class="label">mainnet chains</span></div><div class="metric"><span class="figure">21</span><span class="label">yield strategies</span></div></div>
+  <ul class="tags"><li>Solidity</li><li>ERC-4626</li><li>Cross-chain</li><li>ZetaChain</li><li>Foundry</li></ul>
+  <p class="more"><a href="./work/amana.html">Read more →</a></p>
+</article>
+<article class="card">
+  <header>
+    <h3><a href="./work/crystl.html">Crystl Finance</a></h3>
+    <p class="role">Lead Solidity Developer</p>
+    <p class="period">July 2021 – July 2022</p>
+  </header>
+  <p>Multi-chain vaulting protocol. Led the Solidity team through a V3 redesign and an external audit.</p>
+  <div class="metrics"><div class="metric"><span class="figure">$30M+</span><span class="label">peak TVL</span></div><div class="metric"><span class="figure">3</span><span class="label">engineers led</span></div></div>
+  <ul class="tags"><li>Solidity</li><li>Vaults</li><li>Polygon</li><li>Cronos</li><li>Truffle</li></ul>
+  <p class="more"><a href="./work/crystl.html">Read more →</a></p>
+</article>
+</div>
+<h3 class="subhead">Earlier</h3>
+<div class="cards secondary">
+<article class="card">
+  <header>
+    <h3><a href="./work/atem.html">Atem</a></h3>
+    <p class="role">Blockchain Engineer</p>
+    <p class="period">November 2022 – June 2024</p>
+  </header>
+  <p>Tokenised-carbon platform. Adapter contracts, subgraphs, relayer infrastructure and a platform-wide threat model.</p>
+  
+  <ul class="tags"><li>Solidity</li><li>Subgraphs</li><li>Polygon</li><li>Threat modelling</li></ul>
+  <p class="more"><a href="./work/atem.html">Read more →</a></p>
+</article>
+<article class="card">
+  <header>
+    <h3><a href="./work/opty.html">Opty.fi</a></h3>
+    <p class="role">Solidity Developer</p>
+    <p class="period">December 2021 – October 2022</p>
+  </header>
+  <p>Yield-optimisation protocol. Built a Beefy adapter, then joined the optimisation-engine team building cost/benefit models in Python.</p>
+  
+  <ul class="tags"><li>Solidity</li><li>Python</li><li>Hardhat</li><li>Ethereum</li></ul>
+  <p class="more"><a href="./work/opty.html">Read more →</a></p>
+</article>
+</div>
+</section>
+
+<section id="security" class="prose">
+<h2 id="security-practice">Security practice</h2>
+<p>Most of the bugs I have found in production did not throw an error. They balanced. They reconciled. They were simply paying the wrong number to the wrong person, quietly, for weeks. That is the class of defect I have come to specialise in, and it is why I think security is a design activity rather than a testing activity — you find these by reasoning about state transitions, not by waiting for something to go red.</p>
+<p><strong>What that looks like in practice</strong></p>
+<ul>
+<li>Specifying a system's financial invariants explicitly — budget conservation, monotonic allocation, duplicate-free trees, encoding matched byte-for-byte against the on-chain verifier — and then enforcing them in tests and in scripts that run against production data as a deployment gate.</li>
+<li>Leading external audit engagements from the client side: scoping, responding to findings, deciding remediations, and arguing when I disagree.</li>
+<li>Running an internal review pass before anything reaches an external auditor.</li>
+</ul>
+<p><strong>Track record</strong></p>
+<ul>
+<li>Sole counterpart to external auditors across four engagements at Hydrex. The decentralisation workstream I delivered came back with <strong>zero high-severity findings across fifteen contracts</strong>, and no failed remediations.</li>
+<li>Took Amana through external audit by Linum Labs as founder, having run static analysis in-house first.</li>
+<li>Took Crystl Finance's V3 vault contracts through a HashEx audit — both the <a href="https://richjamo.github.io/portfolio/documents/Crystl-Vaults_preliminary-audit-report_1648559243967.pdf">preliminary</a> and <a href="https://richjamo.github.io/portfolio/documents/Crystl-Vaults_audit-report_1651814621605.pdf">final</a> reports are public.</li>
+<li>Completed a platform-wide threat model at Atem, covering databases, contracts, frontend, hosting, multisigs and custody, with a matching control table for prevention, monitoring and response.</li>
+<li>Competing in audit contests, with accepted findings on HackenProof.</li>
+</ul>
+<p>I also build my own review tooling — a private toolkit covering EVM contracts, Solana programs and L1 protocol code.</p>
+</section>
+
+<section id="approach" class="prose">
+<h2 id="how-i-work-with-ai">How I work with AI</h2>
+<p>I use AI heavily and I am specific about how, because I got it wrong once in a way that taught me the actual lesson.</p>
+<p>On one workstream I let the model build a contract family end to end. I designed the architecture and stayed too far from the implementation. The tests were written by the same model, in the same context, as the code they were meant to falsify — so a green suite carried no independent signal at all. It was self-confirmation dressed as verification. An external audit found what the tests could not.</p>
+<p>Nothing was deployed and no user funds were ever exposed. But the failure was worth more than the workstream would have been, because the diagnosis generalises: <strong>the problem was never the tool, it was the verification model.</strong> The speed was real. The checking was circular.</p>
+<p>What I rebuilt afterwards is a single idea applied consistently — introduce independent signal at every point where I was previously trusting my own first answer:</p>
+<ul>
+<li><strong>Shorter iterations.</strong> Stay in the decisions rather than reviewing a finished artefact.</li>
+<li><strong>Principles encoded into the tooling</strong>, not remembered. Standards live in the instruction files the model actually reads — priority ordering, minimal diffs, and a rule that a test which would pass against a no-op function is not a test.</li>
+<li><strong>A reviewer in a different context.</strong> A separate agent reviews the work, deliberately outside the window in which it was written, told plainly that it did not write this code and should review what it permits rather than what the author intended. It reports and never edits.</li>
+<li><strong>Review stages before the external auditor</strong>, so the auditor is not the first independent reader.</li>
+<li><strong>My own audit tooling</strong>, built around adversarial refutation and proof-of-concept evidence rather than assertion.</li>
+</ul>
+<p>That process has since outperformed a commercial AI scanner on the same codebase, catching a critical issue in a file that was inside the scanner's own scope.</p>
+<p>I also proposed the weekly internal forum where my team now compares notes on what is working with these tools. Being asked to present my own method to peers is what forced me to articulate it properly — which is usually how it goes.</p>
+<p>Architecture, correctness and security remain mine. The tooling is leverage, not delegation.</p>
+</section>
+
+<section id="about" class="prose">
+<h2 id="about">About</h2>
+<p>I came to software late and deliberately.</p>
+<p>I read Philosophy and Pure Mathematics, then Electrical Engineering, at the University of Cape Town. I started out in corporate finance — leveraged finance at Citigroup in London, equity research at Sanford C. Bernstein before that — then came home and spent the next decade in leadership work: setting up and running a political party's leadership academy, then designing programmes for corporates, then heading a coaching practice. Along the way I started two businesses, one in solar installation and one in mindfulness training.</p>
+<p>The through-line I had lost was the one I had been best at as a teenager: mathematics, systems, and code. In 2021 I went back to it properly, chose Solidity, and started building. A hackathon runner-up finish and a bounty submission turned into core-team roles at two protocols, and it has been full-time since.</p>
+<p><strong>What that background is actually worth.</strong> Two things, and I would rather be concrete about them than claim they make me special.</p>
+<p>The finance is genuinely useful. Leveraged finance is structurally the same subject as DeFi lending — collateral, leverage, liquidation, credit risk — so I can hold a conversation about risk in financial terms and not only in protocol terms.</p>
+<p>The coaching matters more than it sounds. A decade of developing leaders, four years of it heading a practice, means the parts of engineering leadership that most people improvise — giving hard feedback, handling conflict, working out what someone actually needs to grow — are trained rather than guessed. I still keep a small number of senior coaching clients.</p>
+<p><strong>Currently</strong> in Plettenberg Bay, South Africa, working remotely on UTC+2.</p>
+<p>Outside work: my daughter, surfing, trail running and mountain biking, in roughly that order of priority.</p>
+<p><strong>Education</strong></p>
+<ul>
+<li>BSc Electrical Engineering, University of Cape Town — Honours, Cum Laude; Dean's List 2001, 2002, 2003</li>
+<li>BA Philosophy and Mathematics, University of Cape Town</li>
+<li>Professional Coaching Certificate, UCT Graduate School of Business</li>
+</ul>
+</section>
+
+</main>
+<footer class="site">
+  <p><a href="mailto:jamieson.rich@gmail.com">jamieson.rich@gmail.com</a> · <a href="https://github.com/RichJamo">GitHub</a></p>
+  <p class="muted">Plettenberg Bay, South Africa · UTC+2</p>
+</footer>
+</body>
+</html>

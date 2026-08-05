@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crystl Finance — Richard Jamieson</title>
+<meta name="description" content="Multi-chain vaulting protocol. Led the Solidity team through a V3 redesign and an external audit.">
+<meta name="colour-scheme" content="light dark">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>◆</text></svg>">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <a class="wordmark" href="../index.html">Richard Jamieson</a>
+  <nav><a href="../index.html#work">Work</a><a href="../index.html#security">Security</a><a href="../index.html#approach">Approach</a><a href="../index.html#about">About</a></nav>
+</header>
+<main id="main">
+<article class="prose project">
+<header class="project-head">
+  <p class="eyebrow"><a href="../index.html#work">Work</a></p>
+  <h1>Crystl Finance</h1>
+  <p class="role">Lead Solidity Developer</p>
+  <p class="period">July 2021 – July 2022</p>
+  <div class="metrics"><div class="metric"><span class="figure">$30M+</span><span class="label">peak TVL</span></div><div class="metric"><span class="figure">3</span><span class="label">engineers led</span></div></div>
+</header>
+<p>Crystl Finance was a multi-chain vaulting platform that exceeded <strong>USD 30 million in TVL</strong> at its peak. I led a team of three Solidity developers, working alongside the frontend team, the CEO and the product manager.</p>
+<p>Three pieces of work mattered.</p>
+<h2 id="shipping-vaults-fast-without-shipping-bugs">Shipping vaults fast, without shipping bugs</h2>
+<p>At the height of that cycle there were new yield farms appearing daily, and our job was to have vaults live on them quickly. Quickly, but not carelessly — every new farm was a new integration surface.</p>
+<p>We semi-automated it: configuration files in the repository, deployment scripts reading directly from those configs. Most farms were forks of two or three base designs, so the strategy contracts rarely needed an overhaul — but there were always quirks, dual-reward farms and unusual reward tokens among them, that needed a careful minimal change rather than a rewrite.</p>
+<p>I owned the test suite that gated all of it: contracts deployed onto a forked node against an archive node, exercising deposits, withdrawals and the rest after every change.</p>
+<h2 id="the-v3-vaults">The V3 vaults</h2>
+<p>We were asked for three things the existing contracts could not do: <strong>maximizer vaults</strong> that compound into a second vault, <strong>boosted vaults</strong> paying additional rewards on top of the compounding yield, and <strong>zap in/out</strong> so users could deposit in whatever token they held.</p>
+<p>The design question at the outset was how much battle-tested code to keep. In smart contracts, old code that has survived contact with the world is worth a great deal. We decided to overhaul the majority of the vault structure while preserving the core accounting logic.</p>
+<p>The hardest part was tracking user shares accurately through multiple levels of vaulting, with users depositing and withdrawing at arbitrary times. That is deceptively difficult — it looks like bookkeeping until you write down the cases. Another engineer and I solved it by going back to first principles and deriving the share mathematics rather than patching it.</p>
+<p>Then two engineering problems. The main vault contract grew too large to deploy, so we pared redundant code, extracted functions into external libraries and tuned the optimiser until it fit. And per-vault deployment cost was too high, so we introduced a factory contract to deploy strategy instances.</p>
+<p>We tested with Mythril, then took the contracts through a <strong>HashEx audit</strong>. Both reports are public.</p>
+<p>The work won a runner-up prize at the Polygon BuidlIt Hackathon 2022, and second runner-up in the TRON Grand Hackathon 2022.</p>
+<h2 id="launching-on-a-brand-new-chain">Launching on a brand-new chain</h2>
+<p>We deployed to Cronos essentially at its launch, and underestimated what that meant. There was one block explorer, provided by the chain team, and it was unreliable — which made contract verification difficult and manual testing harder still. Parts of our deployment toolchain simply did not work against the chain, so we deployed manually. No archive node existed with any major provider, so our fork-based test suite could not run at all.</p>
+<p>We adapted: test the shared functionality on Polygon where the tooling worked, move the contracts across, and test only the chain-specific differences by hand. Not elegant, but it shipped without incident.</p>
+<h2>Links</h2><ul class="links"><li><a href="https://richjamo.github.io/portfolio/documents/Crystl-Vaults_audit-report_1651814621605.pdf">HashEx audit report</a></li></ul>
+<p class="back"><a href="../index.html#work">← All work</a></p>
+</article>
+</main>
+<footer class="site">
+  <p><a href="mailto:jamieson.rich@gmail.com">jamieson.rich@gmail.com</a> · <a href="https://github.com/RichJamo">GitHub</a></p>
+  <p class="muted">Plettenberg Bay, South Africa · UTC+2</p>
+</footer>
+</body>
+</html>
