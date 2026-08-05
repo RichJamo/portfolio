@@ -6,6 +6,12 @@
 <title>Hydrex — Richard Jamieson</title>
 <meta name="description" content="Concentrated-liquidity DEX on Base. Sole engineer on the protocol&#x27;s liquidity-mining reward system, and a contributor to its contract layer.">
 <meta name="colour-scheme" content="light dark">
+<meta property="og:title" content="Hydrex — Richard Jamieson">
+<meta property="og:description" content="Concentrated-liquidity DEX on Base. Sole engineer on the protocol&#x27;s liquidity-mining reward system, and a contributor to its contract layer.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="../assets/og-image.png">
 <link rel="stylesheet" href="../style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>◆</text></svg>">
 </head>
@@ -20,11 +26,11 @@
 <header class="project-head">
   <p class="eyebrow"><a href="../index.html#work">Work</a></p>
   <h1>Hydrex</h1>
-  <p class="role">Senior Smart Contract Engineer / Protocol Engineer</p>
+  <p class="role">Senior Smart Contract Engineer</p>
   <p class="period">November 2025 – present</p>
   <div class="metrics"><div class="metric"><span class="figure">25.1M</span><span class="label">tokens distributed</span></div><div class="metric"><span class="figure">1,669</span><span class="label">liquidity providers</span></div><div class="metric"><span class="figure">99.97%</span><span class="label">transaction success</span></div></div>
 </header>
-<p>Hydrex is a concentrated-liquidity DEX on Base. I joined in November 2025 as a protocol engineer, and I own its liquidity-mining reward system outright.</p>
+<p>Hydrex is a concentrated-liquidity DEX on Base. I joined in November 2025 as a senior smart contract engineer, and I own its liquidity-mining reward system outright.</p>
 <h2 id="the-reward-system">The reward system</h2>
 <p>Liquidity mining sounds simple until you try to make it exact. A campaign says: pay this budget, to whoever provides liquidity in this pool, over this window, in proportion to how much and for how long. Doing that honestly means measuring every position continuously, and settling on-chain cheaply enough that the gas does not eat the reward.</p>
 <p>I designed and built the whole thing — a TypeScript and NestJS service that continuously snapshots every position in incentivised pools, converts those observations into time-weighted score-seconds, allocates against a fixed budget, publishes Merkle roots on-chain, and serves claim proofs through a public API. PostgreSQL with TimescaleDB underneath, Redis for caching.</p>
@@ -41,8 +47,8 @@
 <p>I think about those two more than anything else I have shipped. Failure modes that do not look like failures are the ones worth building your process around.</p>
 <h2 id="contracts-and-security">Contracts and security</h2>
 <p>Alongside the distributor I work on the protocol's Solidity — roughly 6,370 lines of production contract code to date.</p>
-<p>I delivered the protocol's decentralisation workstream, moving privileged minting behind a 24-hour timelock. <strong>Fifteen contracts, audited, zero high-severity findings, no failed remediations.</strong> I have been the sole counterpart to our external auditors across four engagements: scoping, findings response, remediation.</p>
-<p>I also hardened the distributor's own operational surface — splitting a monolithic service so the public API process cannot hold the signing key, and restricting the operator key to a single on-chain role verified to hold no administrative privileges.</p>
+<p>I delivered the protocol's decentralisation workstream, moving privileged functions behind a timelock and tightening who can do what on-chain. <strong>Fifteen contracts, audited, zero high-severity findings, no failed remediations.</strong> I have been the sole counterpart to our external auditors across four engagements: scoping, findings response, remediation.</p>
+<p>I also split the distributor from one process into separate web and worker processes. The driver was operational — a shared connection pool let aggregation starve user requests, and memory and hosting costs were unpredictable — but the security consequence is the better half: the public API process now cannot hold the signing key at all. The operator key is restricted to a single on-chain role, verified to hold no administrative privileges.</p>
 
 <p class="back"><a href="../index.html#work">← All work</a></p>
 </article>

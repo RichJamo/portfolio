@@ -6,6 +6,12 @@
 <title>Richard Jamieson</title>
 <meta name="description" content="Protocol architect and engineering lead. Solidity, cross-chain vault systems, incentive infrastructure and smart-contract security.">
 <meta name="colour-scheme" content="light dark">
+<meta property="og:title" content="Richard Jamieson">
+<meta property="og:description" content="Protocol architect and engineering lead. Solidity, cross-chain vault systems, incentive infrastructure and smart-contract security.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="./assets/og-image.png">
 <link rel="stylesheet" href="./style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>◆</text></svg>">
 </head>
@@ -29,7 +35,7 @@
 <article class="card">
   <header>
     <h3><a href="./work/hydrex.html">Hydrex</a></h3>
-    <p class="role">Senior Smart Contract Engineer / Protocol Engineer</p>
+    <p class="role">Senior Smart Contract Engineer</p>
     <p class="period">November 2025 – present</p>
   </header>
   <p>Concentrated-liquidity DEX on Base. Sole engineer on the protocol's liquidity-mining reward system, and a contributor to its contract layer.</p>
@@ -89,7 +95,7 @@
 
 <section id="security" class="prose">
 <h2 id="security-practice">Security practice</h2>
-<p>Most of the bugs I have found in production did not throw an error. They balanced. They reconciled. They were simply paying the wrong number to the wrong person, quietly, for weeks. That is the class of defect I have come to specialise in, and it is why I think security is a design activity rather than a testing activity — you find these by reasoning about state transitions, not by waiting for something to go red.</p>
+<p>Most of the bugs I have found in production did not throw an error. They balanced. They reconciled. They were simply paying the wrong number to the wrong person, quietly, for weeks. That class of defect is why I think security is a design activity rather than a testing activity — you find these by reasoning about state transitions, not by waiting for something to go red.</p>
 <p><strong>What that looks like in practice</strong></p>
 <ul>
 <li>Specifying a system's financial invariants explicitly — budget conservation, monotonic allocation, duplicate-free trees, encoding matched byte-for-byte against the on-chain verifier — and then enforcing them in tests and in scripts that run against production data as a deployment gate.</li>
@@ -120,13 +126,13 @@
 <li><strong>Review stages before the external auditor</strong>, so the auditor is not the first independent reader.</li>
 <li><strong>My own audit tooling</strong>, built around adversarial refutation and proof-of-concept evidence rather than assertion.</li>
 </ul>
-<p>That process has since outperformed a commercial AI scanner on the same codebase, catching a critical issue in a file that was inside the scanner's own scope.</p>
 <p>I also proposed the weekly internal forum where my team now compares notes on what is working with these tools. Being asked to present my own method to peers is what forced me to articulate it properly — which is usually how it goes.</p>
 <p>Architecture, correctness and security remain mine. The tooling is leverage, not delegation.</p>
 </section>
 
 <section id="about" class="prose">
 <h2 id="about">About</h2>
+<img class="portrait" src="assets/profile-640.jpg" srcset="assets/profile-320.jpg 320w, assets/profile-640.jpg 640w" sizes="168px" width="168" height="168" alt="Richard Jamieson" loading="lazy">
 <p>I came to software late and deliberately.</p>
 <p>I read Philosophy and Pure Mathematics, then Electrical Engineering, at the University of Cape Town. I started out in corporate finance — leveraged finance at Citigroup in London, equity research at Sanford C. Bernstein before that — then came home and spent the next decade in leadership work: setting up and running a political party's leadership academy, then designing programmes for corporates, then heading a coaching practice. Along the way I started two businesses, one in solar installation and one in mindfulness training.</p>
 <p>The through-line I had lost was the one I had been best at as a teenager: mathematics, systems, and code. In 2021 I went back to it properly, chose Solidity, and started building. A hackathon runner-up finish and a bounty submission turned into core-team roles at two protocols, and it has been full-time since.</p>
@@ -134,7 +140,7 @@
 <p>The finance is genuinely useful. Leveraged finance is structurally the same subject as DeFi lending — collateral, leverage, liquidation, credit risk — so I can hold a conversation about risk in financial terms and not only in protocol terms.</p>
 <p>The coaching matters more than it sounds. A decade of developing leaders, four years of it heading a practice, means the parts of engineering leadership that most people improvise — giving hard feedback, handling conflict, working out what someone actually needs to grow — are trained rather than guessed. I still keep a small number of senior coaching clients.</p>
 <p><strong>Currently</strong> in Plettenberg Bay, South Africa, working remotely on UTC+2.</p>
-<p>Outside work: my daughter, surfing, trail running and mountain biking, in roughly that order of priority.</p>
+<p>Outside work: my partner and our two daughters, then surfing, trail running and mountain biking, in roughly that order of priority.</p>
 <p><strong>Education</strong></p>
 <ul>
 <li>BSc Electrical Engineering, University of Cape Town — Honours, Cum Laude; Dean's List 2001, 2002, 2003</li>
