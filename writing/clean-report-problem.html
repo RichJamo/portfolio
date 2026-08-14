@@ -119,14 +119,14 @@
       <span class="ln" style="width:45%"></span>
     </div>
   </div>
-  <p class="exhibit-cap">Same codebase, same model, same afternoon. One finding missing, and nothing in the document says so.</p>
+  <p class="exhibit-cap">Same codebase, same model, same afternoon. One finding missing, and nothing in the document says so. <a href="./two-reports.html">Compare the two reports &#8594;</a></p>
 </div>
 
 <h2 id="two-reports">Two reports</h2>
 <p>Here are two security audits of the same nine-file codebase. Same model, same prompt, same afternoon.</p>
 <p>One found a bug that lets any user drain the reward pool. The other never mentions the file it lives in.</p>
-<p>They are near enough the same length — 1,445 words against 1,107. Both open with a scope line and work down through findings by severity, with exploit paths and one-line fixes. Both read like careful work, because both are careful work. The second one simply never opened one of the files, and nothing in it says so. No warning. No error. No line reading “I skipped something.” Strip out the findings and you could not tell them apart.</p>
-<p>Both are in the <a href="https://github.com/RichJamo/clean-report-problem">repository</a>. The difference between them is seventy-one words in a file called <code>CLAUDE.md</code>.</p>
+<p>They are near enough the same length — 1,437 words against 1,099. Both open with a scope line and work down through findings by severity, with exploit paths and one-line fixes. Both read like careful work, because both are careful work. The second one simply never opened one of the files, and nothing in it says so. No warning. No error. No line reading “I skipped something.” Strip out the findings and you could not tell them apart.</p>
+<p><a href="./two-reports.html"><strong>Both reports are here, side by side.</strong></a> Read them before you take my word for it — the claim is that you cannot tell which one missed the bug, and that is checkable in about two minutes. The difference between them is seventy-one words in a file called <code>CLAUDE.md</code>.</p>
 <p>I came at this from competitive audit work, where the only thing that really matters is recall. A bug you never hypothesised is a bug you cannot recover later, and it costs you the same whether you were careless or merely unlucky. So <em>what did the reviewer never even look at</em> is a question I already think about too much. This is what happened when I pointed it at an agent.</p>
 <p>The underlying mechanism isn't mine. It belongs to <a href="https://www.cloudflare.com/cloudforce-one/research/adversarial-deception-a-study-of-indirect-prompt-code-injection/">Cloudflare's Cloudforce One</a>, who established it with a great deal more statistical power than I have. What follows is what happens when you move it to a different job.</p>
 
