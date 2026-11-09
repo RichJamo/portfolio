@@ -1,7 +1,7 @@
 # richardjamieson.co.za
 
-This repository hosts my portfolio site: protocol engineering and security work, writing,
-and how I work with AI.
+This repository hosts my portfolio site: the services and contracts I've built, writing, and
+how I work with AI.
 
 Live at [richardjamieson.co.za](https://richardjamieson.co.za/).
 
