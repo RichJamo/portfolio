@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Richard Jamieson</title>
-<meta name="description" content="Protocol architect and engineering lead. Solidity, cross-chain vault systems, incentive infrastructure and smart-contract security.">
+<meta name="description" content="Full-stack engineer, mostly backend. TypeScript services on PostgreSQL, the smart contracts they call, and the front ends around them.">
 <meta name="color-scheme" content="light dark">
 <meta property="og:title" content="Richard Jamieson">
-<meta property="og:description" content="Protocol architect and engineering lead. Solidity, cross-chain vault systems, incentive infrastructure and smart-contract security.">
+<meta property="og:description" content="Full-stack engineer, mostly backend. TypeScript services on PostgreSQL, the smart contracts they call, and the front ends around them.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://richardjamieson.co.za/assets/og-image.png">
 <meta property="og:url" content="https://richardjamieson.co.za/">
@@ -25,9 +25,9 @@
 </header>
 <main id="main">
 <section class="hero">
-<h1>Protocol architect and engineering lead</h1>
-<p>I design, build and secure DeFi infrastructure — Solidity contracts, cross-chain vault systems, and the off-chain services that settle them on-chain.</p>
-<p>Currently Senior Smart Contract Engineer at <strong>Hydrex</strong>, a concentrated-liquidity DEX on Base, where I am the sole engineer on the protocol's liquidity-mining reward system. Before that I founded <strong>Amana DeFi</strong>, an omnichain yield aggregator on ZetaChain, and wrote its protocol layer.</p>
+<h1>Full-stack engineer, mostly backend</h1>
+<p>Since 2021 I've worked in crypto, writing smart contracts and the backend services and front ends that sit around them.</p>
+<p>At <strong>Hydrex</strong>, a DEX on Base, I started on the contracts, then built the service that pays out the protocol's liquidity rewards and ran it as its only engineer. I was there on contract from November 2025 to September 2026, and I've stayed on part-time since as a consulting engineer. Before that I founded <strong>Amana DeFi</strong>, a cross-chain yield aggregator on ZetaChain, and wrote most of its Solidity and much of its front end.</p>
 <p>Twenty years of work before this — corporate finance, two companies of my own, and a decade developing leaders — which is why I tend to think about systems and the people running them at the same time.</p>
 </section>
 
@@ -38,11 +38,11 @@
   <header>
     <h3><a href="./work/hydrex.html">Hydrex</a></h3>
     <p class="role">Senior Smart Contract Engineer</p>
-    <p class="period">November 2025 – present</p>
+    <p class="period">November 2025 – September 2026</p>
   </header>
-  <p>Concentrated-liquidity DEX on Base. Sole engineer on the protocol's liquidity-mining reward system, and a contributor to its contract layer.</p>
-  <div class="metrics"><div class="metric"><span class="figure">25.1M</span><span class="label">tokens distributed</span></div><div class="metric"><span class="figure">1,669</span><span class="label">liquidity providers</span></div><div class="metric"><span class="figure">99.97%</span><span class="label">transaction success</span></div></div>
-  <ul class="tags"><li>Solidity</li><li>TypeScript</li><li>NestJS</li><li>PostgreSQL</li><li>Merkle</li><li>Base</li></ul>
+  <p>Concentrated-liquidity DEX on Base. Built and ran the service that pays out its liquidity rewards, as its only engineer, and wrote contracts it depends on. Consulting part-time since October 2026.</p>
+  <div class="metrics"><div class="metric"><span class="figure">25.1M</span><span class="label">tokens paid out</span></div><div class="metric"><span class="figure">1,669</span><span class="label">liquidity providers</span></div><div class="metric"><span class="figure">6.1s → 1.5s</span><span class="label">bulk-proof p90</span></div></div>
+  <ul class="tags"><li>TypeScript</li><li>NestJS</li><li>PostgreSQL</li><li>Redis</li><li>Solidity</li><li>Base</li></ul>
   <p class="more"><a href="./work/hydrex.html">Read more →</a></p>
 </article>
 <article class="card">
@@ -53,7 +53,7 @@
   </header>
   <p>Omnichain yield aggregator on ZetaChain. Founded it, designed the architecture and wrote the protocol layer.</p>
   <div class="metrics"><div class="metric"><span class="figure">94%</span><span class="label">of the Solidity written</span></div><div class="metric"><span class="figure">6</span><span class="label">mainnet chains</span></div><div class="metric"><span class="figure">21</span><span class="label">yield strategies</span></div></div>
-  <ul class="tags"><li>Solidity</li><li>ERC-4626</li><li>Cross-chain</li><li>ZetaChain</li><li>Foundry</li></ul>
+  <ul class="tags"><li>Solidity</li><li>ERC-4626</li><li>Cross-chain</li><li>ZetaChain</li><li>Next.js</li></ul>
   <p class="more"><a href="./work/amana.html">Read more →</a></p>
 </article>
 <article class="card">
@@ -62,7 +62,7 @@
     <p class="role">Lead Solidity Developer</p>
     <p class="period">July 2021 – July 2022</p>
   </header>
-  <p>Multi-chain vaulting protocol. Led the Solidity team through a V3 redesign and an external audit.</p>
+  <p>Multi-chain vaulting protocol. Led the Solidity team and took the vault contracts through an external audit.</p>
   <div class="metrics"><div class="metric"><span class="figure">$30M+</span><span class="label">peak TVL</span></div><div class="metric"><span class="figure">3</span><span class="label">engineers led</span></div></div>
   <ul class="tags"><li>Solidity</li><li>Vaults</li><li>Polygon</li><li>Cronos</li><li>Truffle</li></ul>
   <p class="more"><a href="./work/crystl.html">Read more →</a></p>
@@ -100,15 +100,15 @@
 <p>Most of the bugs I have found in production did not throw an error. They balanced. They reconciled. They were simply paying the wrong number to the wrong person, quietly, for weeks. That class of defect is why I think security is a design activity rather than a testing activity — you find these by reasoning about state transitions, not by waiting for something to go red.</p>
 <p><strong>What that looks like in practice</strong></p>
 <ul>
-<li>Specifying a system's financial invariants explicitly — budget conservation, monotonic allocation, duplicate-free trees, encoding matched byte-for-byte against the on-chain verifier — and then enforcing them in tests and in scripts that run against production data as a deployment gate.</li>
+<li>Specifying a system's financial invariants explicitly — budget conservation, monotonic allocation, duplicate-free trees, encoding matched byte-for-byte against the on-chain verifier — and then testing them, with scripts I run against production data before deploys.</li>
 <li>Leading external audit engagements from the client side: scoping, responding to findings, deciding remediations, and arguing when I disagree.</li>
 <li>Running an internal review pass before anything reaches an external auditor.</li>
 </ul>
 <p><strong>Track record</strong></p>
 <ul>
-<li>Sole counterpart to external auditors across four engagements at Hydrex. The decentralisation workstream I delivered came back with <strong>zero high-severity findings across fifteen contracts</strong>, and no failed remediations.</li>
+<li>Sole counterpart to external auditors across four engagements at Hydrex. The decentralisation workstream I delivered came back with <strong>zero high-severity findings across fifteen contracts</strong>.</li>
 <li>Took Amana through external audit by Linum Labs as founder, having run static analysis in-house first.</li>
-<li>Took Crystl Finance's V3 vault contracts through a HashEx audit — both the <a href="https://richardjamieson.co.za/documents/Crystl-Vaults_preliminary-audit-report_1648559243967.pdf">preliminary</a> and <a href="https://richardjamieson.co.za/documents/Crystl-Vaults_audit-report_1651814621605.pdf">final</a> reports are public.</li>
+<li>Took Crystl Finance's vault contracts through a HashEx audit — both the <a href="https://richardjamieson.co.za/documents/Crystl-Vaults_preliminary-audit-report_1648559243967.pdf">preliminary</a> and <a href="https://richardjamieson.co.za/documents/Crystl-Vaults_audit-report_1651814621605.pdf">final</a> reports are public.</li>
 <li>Completed a platform-wide threat model at Atem, covering databases, contracts, frontend, hosting, multisigs and custody, with a matching control table for prevention, monitoring and response.</li>
 <li>Competing in audit contests, with accepted findings on HackenProof.</li>
 </ul>
@@ -153,7 +153,7 @@
 <h2 id="about">About</h2>
 <img class="portrait" src="assets/profile-640.jpg" srcset="assets/profile-320.jpg 320w, assets/profile-640.jpg 640w" sizes="168px" width="168" height="168" alt="Richard Jamieson" loading="lazy">
 <p>I came to software late and deliberately.</p>
-<p>I read Philosophy and Pure Mathematics, then Electrical Engineering, at the University of Cape Town. I started out in corporate finance — leveraged finance at Citigroup in London, equity research at Sanford C. Bernstein before that — then came home and spent the next decade in leadership work: setting up and running a political party's leadership academy, then designing programmes for corporates, then heading a coaching practice. Along the way I started two businesses, one in solar installation and one in mindfulness training.</p>
+<p>I studied philosophy and then electrical engineering at the University of Cape Town. I started out in corporate finance — leveraged finance at Citigroup in London, equity research at Sanford C. Bernstein before that — then came home and spent the next decade in leadership work: setting up and running a political party's leadership academy, then designing programmes for corporates, then heading a coaching practice. Along the way I started two businesses, one in solar installation and one in mindfulness training.</p>
 <p>The through-line I had lost was the one I had been best at as a teenager: mathematics, systems, and code. In 2021 I went back to it properly, chose Solidity, and started building. A hackathon runner-up finish and a bounty submission turned into core-team roles at two protocols, and it has been full-time since.</p>
 <p><strong>What that background is actually worth.</strong> Two things, and I would rather be concrete about them than claim they make me special.</p>
 <p>The finance is genuinely useful. Leveraged finance is structurally the same subject as DeFi lending — collateral, leverage, liquidation, credit risk — so I can hold a conversation about risk in financial terms and not only in protocol terms.</p>
@@ -162,8 +162,8 @@
 <p>Outside work: my partner and our two daughters, then surfing, trail running and mountain biking, in roughly that order of priority.</p>
 <p><strong>Education</strong></p>
 <ul>
-<li>BSc Electrical Engineering, University of Cape Town — Honours, Cum Laude; Dean's List 2001, 2002, 2003</li>
-<li>BA Philosophy and Mathematics, University of Cape Town</li>
+<li>BSc(Eng) Electrical Engineering, University of Cape Town — First Class Honours; Dean's Merit List 2001 and 2002</li>
+<li>BSocSc, University of Cape Town</li>
 <li>Professional Coaching Certificate, UCT Graduate School of Business</li>
 </ul>
 </section>

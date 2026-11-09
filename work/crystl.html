@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Crystl Finance — Richard Jamieson</title>
-<meta name="description" content="Multi-chain vaulting protocol. Led the Solidity team through a V3 redesign and an external audit.">
+<meta name="description" content="Multi-chain vaulting protocol. Led the Solidity team and took the vault contracts through an external audit.">
 <meta name="color-scheme" content="light dark">
 <meta property="og:title" content="Crystl Finance — Richard Jamieson">
-<meta property="og:description" content="Multi-chain vaulting protocol. Led the Solidity team through a V3 redesign and an external audit.">
+<meta property="og:description" content="Multi-chain vaulting protocol. Led the Solidity team and took the vault contracts through an external audit.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://richardjamieson.co.za/assets/og-image.png">
 <meta property="og:url" content="https://richardjamieson.co.za/work/crystl.html">
@@ -38,7 +38,7 @@
 <p>At the height of that cycle there were new yield farms appearing daily, and our job was to have vaults live on them quickly. Quickly, but not carelessly — every new farm was a new integration surface.</p>
 <p>We semi-automated it: configuration files in the repository, deployment scripts reading directly from those configs. Most farms were forks of two or three base designs, so the strategy contracts rarely needed an overhaul — but there were always quirks, dual-reward farms and unusual reward tokens among them, that needed a careful minimal change rather than a rewrite.</p>
 <p>I owned the test suite that gated all of it: contracts deployed onto a forked node against an archive node, exercising deposits, withdrawals and the rest after every change.</p>
-<h2 id="the-v3-vaults">The V3 vaults</h2>
+<h2 id="maximizer-and-boosted-vaults">Maximizer and boosted vaults</h2>
 <p>We were asked for three things the existing contracts could not do: <strong>maximizer vaults</strong> that compound into a second vault, <strong>boosted vaults</strong> paying additional rewards on top of the compounding yield, and <strong>zap in/out</strong> so users could deposit in whatever token they held.</p>
 <p>The design question at the outset was how much battle-tested code to keep. In smart contracts, old code that has survived contact with the world is worth a great deal. We decided to overhaul the majority of the vault structure while preserving the core accounting logic.</p>
 <p>The hardest part was tracking user shares accurately through multiple levels of vaulting, with users depositing and withdrawing at arbitrary times. That is deceptively difficult — it looks like bookkeeping until you write down the cases. Another engineer and I solved it by going back to first principles and deriving the share mathematics rather than patching it.</p>
